@@ -1,13 +1,15 @@
 package lv.sda.books;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Collections.emptyList;
 
 public class Bookstore {
+    List<Book> books = new ArrayList<>();
 
     public void addBook(Book book) {
-        // pievienosim grāmatu
+        books.add(book);
     }
 
     public void removeBook(String isbn) {
@@ -25,6 +27,6 @@ public class Bookstore {
     }
 
     public List<Book> allBooks() {
-        return emptyList();
+        return books;
     }
 }
