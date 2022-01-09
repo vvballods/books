@@ -76,4 +76,17 @@ public class Book {
     public void setPublishingYear(LocalDate publishingYear) {
         this.publishingYear = publishingYear;
     }
+
+    @Override
+    public String toString() {
+        return String.join(";",
+                isbn,
+                title,
+                author,
+                publisher,
+                description,
+                Integer.valueOf(pages).toString(),
+                Integer.valueOf(publishingYear.getYear()).toString()
+        );
+    }
 }
